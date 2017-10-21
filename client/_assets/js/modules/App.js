@@ -38,6 +38,9 @@ var App = {
     deviceId = MyExtion.getCookie(this.cookieId)
     if (MyExtion.isEmptyStr(deviceId)) {
       this.showDeviceSetting();
+    } else {
+      this.data.deviceId = deviceId;
+      FaceCover.run();
     }
   },
 

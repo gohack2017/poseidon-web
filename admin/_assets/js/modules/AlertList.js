@@ -9,20 +9,23 @@ var AlertList = {
   },
 
   renderList: function(items) {
-    this.$el.html("")
-    content = this.renderItem();
+    var content = "";
+    var that = this;
+    items.forEach(function(item, _){
+      content += that.renderItem(item);
+    })
     this.$el.html(content);
   },
 
   renderItem: function(item) {
     return `
       <tr>
-        <td>徐汇滨江</td>
-        <td>强奸犯</td>
-        <td><img src="xxxxx" /></td>
-        <td><img src="xxxxx" /></td>
-        <td>89.9%</td>
-        <td>2017/10/09 19:56:56</td>
+        <td>${item.address}</td>
+        <td>${item.class}</td>
+        <td><img src="${item.photo}"/></td>
+        <td><img src="${item.scene_photo}"/></td>
+        <td>${(item.score * 100).toFixed(2)} %</td>
+        <td>${item.created_at}</td>
       </tr>
     `
   }

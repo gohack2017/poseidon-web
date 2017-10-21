@@ -5,6 +5,10 @@ var ApiServer = {
     this.post(this.makeRequest("/existdevice"), payload, succussCall, failCall)
   },
 
+  monitor: function(payload, succussCall, failCall) {
+    this.post(this.makeRequest("/check"), payload, succussCall, failCall)
+  },
+
   post: function(url, data, succussCall, failCall){
     this.ajax(url, data, "POST", succussCall, failCall)
   },
