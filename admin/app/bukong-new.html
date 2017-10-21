@@ -30,15 +30,15 @@ layout: application
           <div class="row content-form">
             <div class="form-group">
               <label>填报联系人</label>
-              <input type="text" id="inputName" class="form-control row-group" required autocomplete="off">
+              <input type="text" name="name" class="form-control row-group" required autocomplete="off">
             </div>
             <div class="form-group">
               <label>联系电话</label>
-              <input type="text" id="inputName" class="form-control row-group" required autocomplete="off">
+              <input type="text" name="phone" class="form-control row-group" required autocomplete="off">
             </div>
             <div class="form-group">
               <label>布控类型</label>
-              <select class="form-control">
+              <select class="form-control" name="class">
                 <option value="重点上访">重点上访</option>
                 <option value="嫌疑卖淫">嫌疑卖淫</option>
                 <option value="临时布控">临时布控</option>
@@ -48,7 +48,7 @@ layout: application
             </div>
             <div class="form-group">
               <label>布控照片</label>
-              <input type="file" accept="image/*"/>
+              <input type="file" accept="image/*" required name="uploadfile"/>
             </div>
             <div class="action-buttons">
               <button class="btn btn-primary form-control" type="submit">确认提交</button>

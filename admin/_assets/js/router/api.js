@@ -45,8 +45,8 @@ var ApiServer = {
     this.doGet(this.makeRequest("/bukong"), succussCall, failCall);
   },
 
-  deleteBukongInfos: function(succussCall, failCall) {
-    this.ajax(this.makeRequest("/bukong"), null, "DELETE", succussCall, failCall)
+  deleteBuKong: function(id, succussCall, failCall) {
+    this.ajax(this.makeRequest("/bukong/"+id), null, "DELETE", succussCall, failCall)
   },
 
   getBukongInfoPic: function(id, succussCall, failCall) {
@@ -55,6 +55,14 @@ var ApiServer = {
 
   fetchAerts: function(succussCall, failCall) {
     this.doGet(this.makeRequest("/alert"), succussCall, failCall);
+  },
+
+  fetchDevices: function(succussCall, failCall) {
+    this.doGet(this.makeRequest("/device"), succussCall, failCall);
+  },
+  
+  createDevice: function(payload, succussCall, failCall) {
+    this.post(this.makeRequest("/device"), payload, succussCall, failCall);
   },
 
   post: function(url, data, succussCall, failCall){

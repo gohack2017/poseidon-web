@@ -3,6 +3,9 @@
 //= require modules/AlertList
 //= require modules/BukongList
 //= require modules/AccountList
+//= require modules/DeviceList
+
+//= require modules/DeviceForm
 
 //= require modules/currentuser
 //= require modules/app

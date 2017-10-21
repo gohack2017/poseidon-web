@@ -11,17 +11,19 @@ var BukongList = {
       })
 
       $("#bukong-list").html(items);
-      that.renderImages();
     }, function(e){
       console.log("获取布控列表信息失败");
     })
 
-    $(".js-clear__bukong").on("click", function(){
-      ApiServer.deleteBukongInfos(function(){
-        $("#bukong-list").html("");
-      }, function(err){
-        console.log(err)
-      })
+    $("#bukong-list").on("click", ".js-delete", this.onDelteItem.bind(this))
+  },
+
+  onDelteItem: function(event) {
+    el = $(event.currentTarget)
+    ApiServer.deleteBuKong(el.data("id"), function(data){
+      el.closest("tr").remove();
+    }, function(err){
+      console.log(err)
     })
   },
 
@@ -30,32 +32,14 @@ var BukongList = {
       <tr>
         <td>${data.name}</td>
         <td>${data.phone}</td>
-        <td>${data.sms == "1" ? "是" : "否"}</td>
-        <td>${data.voice == "1" ? "是" : "否"}</td>
-        <td id="bukong-item__sn-${data.id}" data-sn="${data.bk_sn}"></td>
-        <td>${data.bk_name}</td>
-        <td>${data.bk_phone}</td>
-        <td>${data.bk_nation}</td>
-        <td class="bukong-item__img" data-id="${data.id}" id="bukong-item__${data.id}">
+        <td>${data.class}</td>
+        <td class="bukong-item__img">
+          <img src="${data.uri}" />
         </td>
-        <td>${data.bk_type == "o" ? data.bk_type_alias : data.bk_type}</td>
+        <td>
+          <a href="javascript:void(0)" class="js-delete" data-id="${data.id}">删除</a>
+        </td>
       </tr>
     `
-  },
-
-  renderImages: function() {
-    $(".bukong-item__img").each(function(_, el) {
-      var id = $(el).data("id");
-      ApiServer.getBukongInfoPic(id, function(data){
-        if (data != null) {
-          $("#bukong-item__"+id).html(`<img src="${MyExtion.base64Src(data)}" />`);
-        } else {
-          var sn = $("#bukong-item__sn-"+id).data("sn");
-          $("#bukong-item__sn-"+id).text(sn);
-        }
-      }, function(e){
-        console.log(e);
-      })
-    })
   }
 }
