@@ -1,0 +1,44 @@
+---
+layout: settings
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item active">
+          <i class="app-nav__item-icon fa fa-users"></i>
+          <a href="/settings/account.html" class="blue-color">账户管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>账户列表</label>
+      </header>
+
+      <div class="nav-content__main">
+        <div class="row">
+          <div class="col-md-12 table-toolbar">
+            <a href="/settings/account-new.html" class="pull-right">
+              <button class='btn btn-primary'>新增</button>
+            </a>
+          </div>
+        </div>
+        <table class="table table-bordered table-striped account-list margin-top js-app" data-name='AccountList'>
+          <thead>
+            <tr>
+              <th>登录名</th>
+              <th>创建时间</th>
+              <th>最后登录时间</th>
+              <th>登录次数</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="account-list">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

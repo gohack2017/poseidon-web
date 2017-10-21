@@ -1,0 +1,61 @@
+---
+layout: settings
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item active">
+          <span class="app-nav__item-icon icon6"></span>
+          <a href="/settings/account.html" class="blue-color">账户管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>新增账户</label>
+      </header>
+
+      <div class="nav-content__main">
+        <form method="post" id="account-form" name="account-edit">
+          <div class="table1 table-container">
+            <h4 class="table-header">用户信息</h4>
+            <table class="table table-bordered table-form">
+              <thead>
+                <tr>
+                  <td>姓名</td>
+                  <td>联系电话</td>
+                  <td>单位/辖区</td>
+                  <td>登录名</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="userinfo_username"></td>
+                  <td id="userinfo_phone"></td>
+                  <td id="userinfo_area"></td>
+                  <td id="userinfo_email"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table2 table-container bordered">
+            <h4 class="table-header nobordered">权限分配</h4>
+            <div class="row table-form2 abilitiy-table">
+              <table class="table table-bordered">
+                <tbody id="authority-container"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <div class="text-right">
+              <button class="btn gray-btn" type="submit">确认提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

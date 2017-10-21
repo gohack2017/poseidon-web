@@ -1,0 +1,39 @@
+---
+layout: settings
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item active">
+          <i class="app-nav__item-icon fa fa-users"></i>
+          <a href="/settings/account.html">账户管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>新增用户</label>
+      </header>
+
+      <div class="nav-content__main">
+        <form method="post" id="account-form" data-isnew="true">
+          <div class="row content-form">
+            <div class="form-group">
+               <label>登录名</label>
+              <input type="text" id="inputEmail" class="form-control row-group" required autofocus>
+            </div>
+            <div class="form-group">
+              <label>设备密码</label>
+              <input type="password" id="inputPassword" class="form-control row-group" autocomplete="off" required>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-primary form-control" type="submit">确认提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

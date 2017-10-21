@@ -1,0 +1,25 @@
+.brand-header {
+  height: 60px;
+
+  .container {
+    position: relative;
+  }
+}
+
+.brand-heaer__brand {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.brand-header__link {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+}

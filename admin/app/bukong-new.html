@@ -1,0 +1,61 @@
+---
+layout: application
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item">
+          <i class="fa fa-bell-o app-nav__item-icon"></i>
+          <a href="/">告警信息</a>
+        </li>
+        <li class="app-nav__item active">
+          <i class="fa fa-list-alt app-nav__item-icon"></i>
+          <a href="/app/bukong.html">布控填报</a>
+        </li>
+        <li class="app-nav__item">
+          <i class="fa fa-search app-nav__item-icon"></i>
+          <a href="/app/device.html">设备管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>布控填报</label>
+      </header>
+
+      <div class="nav-content__main">
+        <form method="post" enctype="multipart/form-data" action="/v1.0/bukong" id="bukong-form">
+          <div class="row content-form">
+            <div class="form-group">
+              <label>填报联系人</label>
+              <input type="text" id="inputName" class="form-control row-group" required autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label>联系电话</label>
+              <input type="text" id="inputName" class="form-control row-group" required autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label>布控类型</label>
+              <select class="form-control">
+                <option value="重点上访">重点上访</option>
+                <option value="嫌疑卖淫">嫌疑卖淫</option>
+                <option value="临时布控">临时布控</option>
+                <option value="国际刑警">国际刑警</option>
+                <option value=" 戒毒拖失"> 戒毒拖失</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>布控照片</label>
+              <input type="file" accept="image/*"/>
+            </div>
+            <div class="action-buttons">
+              <button class="btn btn-primary form-control" type="submit">确认提交</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

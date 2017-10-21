@@ -1,0 +1,33 @@
+$blue_color: #4a90e2;
+$red_color: #FF0000;
+$black_color: #000;
+$white_color: #FFF;
+$darkblue_color: #123956;
+
+.blue-color {
+  color: $blue_color;
+}
+
+.darkblue-color {
+  color: $darkblue_color;
+}
+
+.red-color {
+  color: $red_color;
+}
+
+.black-color {
+  color: $black_color;
+}
+
+.black-strong-color {
+  color: $black_color;
+  font-weight: 700;
+}
+
+.gray-color {
+  color: #666;
+  &:hover {
+    color: #666;
+  }
+}

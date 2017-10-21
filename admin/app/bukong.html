@@ -1,0 +1,52 @@
+---
+layout: application
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item">
+          <i class="fa fa-bell-o app-nav__item-icon"></i>
+          <a href="/">告警信息</a>
+        </li>
+        <li class="app-nav__item active">
+          <i class="fa fa-list-alt app-nav__item-icon"></i>
+          <a href="/app/bukong.html">布控填报</a>
+        </li>
+        <li class="app-nav__item">
+          <i class="fa fa-search app-nav__item-icon"></i>
+          <a href="/app/device.html">设备管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>布控填报</label>
+      </header>
+
+      <div class="nav-content__main">
+        <div class="row">
+          <div class="col-md-12 table-toolbar">
+            <a href="/app/bukong-new.html" class="pull-right">
+              <button class='btn btn-primary'>新增</button>
+            </a>
+          </div>
+        </div>
+
+        <table class="table table-bordered table-striped margin-top">
+          <thead>
+            <tr>
+              <th>填报人信息</th>
+              <th>联系电话</th>
+              <th>布控类别</th>
+              <th>布控照片</th>
+            </tr>
+          </thead>
+          <tbody id="bukong-list" class="info-list js-app" data-name="BukongList">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

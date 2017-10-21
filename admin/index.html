@@ -1,0 +1,58 @@
+---
+layout: application
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="app-nav">
+        <li class="app-nav__item active">
+          <i class="fa fa-bell-o app-nav__item-icon"></i>
+          <a href="/">告警信息</a>
+        </li>
+        <li class="app-nav__item">
+          <i class="fa fa-list-alt app-nav__item-icon"></i>
+          <a href="/app/bukong.html">布控填报</a>
+        </li>
+        <li class="app-nav__item">
+          <i class="fa fa-search app-nav__item-icon"></i>
+          <a href="/app/device.html">设备管理</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10 nav-content">
+      <header class="nav-content__header">
+        <label>告警信息</label>
+      </header>
+
+      <div class="nav-content__main">
+        <div class="table1 table-container">
+          <table class="table table-bordered table-striped margin-top">
+            <thead>
+              <tr>
+                <th>位置</th>
+                <th>现场照片</th>
+                <th>布控人照片</th>
+                <th>布控人姓名</th>
+                <th>布控人身份证</th>
+                <th>布控类型</th>
+                <th>告警时间</th>
+              </tr>
+            </thead>
+            <tbody id="generate-data" class="info-list">
+              <tr>
+                <td>希尔顿</td>
+                <td>2017-09-16</td>
+                <td>808</td>
+                <td>张三</td>
+                <td>300103198210010001</td>
+                <td>13512345678</td>
+                <td>2017/09/16 11:50:20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

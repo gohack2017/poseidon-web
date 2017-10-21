@@ -1,0 +1,16 @@
+@import 'modules/brand';
+@import 'modules/nav';
+@import 'modules/appnav';
+@import 'modules/form';
+
+.main-content  {
+  background-color: #fff;
+  position: relative;
+  width: 1000px;
+  padding: 40px 40px 10px 40px;
+  border-radius: 5px;
+}
+
+.main-content.lg {
+  width: 100%;
+}

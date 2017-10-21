@@ -1,0 +1,29 @@
+@import 'modules/color';
+
+.sign-form {
+  width: 800px;
+  margin: 200px auto;
+  font-size: 14px;
+
+  .city-selector select {
+    width: 32%;
+  }
+}
+
+.sign-form__header {
+  margin-bottom: 60px;
+  font-size: 48px;
+}
+
+.form-signin {
+  width: 408px;
+  margin: 0 auto;
+}
+
+input.form-control {
+  height: 38px;
+}
+
+.row-group {
+  margin-bottom: 23px;
+}

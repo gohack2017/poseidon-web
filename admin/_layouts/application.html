@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN" charset="UTF-8">
+  <head>
+    {% include head.html %}
+    {% css main %}
+    {% css app %}
+  </head>
+  <body class="no-bg">
+    <header class="brand-header">
+      <div class="container">
+        <div class="brand-heaer__brand">{{site.title}}</div>
+        <span class="gray-color brand-header__link js-app" data-name="LoginOut">退出登录</span>
+      </div>
+    </header>
+    <div class="content">
+      <div class="topnav-container">
+        <div class="container">
+          <div class="topnav__icon">
+            <i class="fa fa-bars"></i>
+          </div>
+          <div class="navs">
+            <a class="topnav__item active" href="/">应用概览</a>
+            <a class="topnav__item" href="{{site.prefix}}/settings/account.html">账号设置</a>
+          </div>
+        </div>
+      </div>
+      {{ content }}
+    </div>
+    {% include footer.html %}
+    {% js app %}
+  </body>
+</html>
