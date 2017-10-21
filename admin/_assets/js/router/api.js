@@ -1,6 +1,6 @@
 var ApiServer = {
   host: "/v1.0",
-  
+
   // session
   login: function(data, succussCall, failCall){
     var url = this.makeRequest("/login");
@@ -53,8 +53,8 @@ var ApiServer = {
     this.doGet(this.makeRequest("/bukong/"+id), succussCall, failCall);
   },
 
-  getAerts: function(succussCall, failCall) {
-    this.doGet(this.makeRequest("/alerts"), succussCall, failCall);
+  fetchAerts: function(succussCall, failCall) {
+    this.doGet(this.makeRequest("/alert"), succussCall, failCall);
   },
 
   post: function(url, data, succussCall, failCall){

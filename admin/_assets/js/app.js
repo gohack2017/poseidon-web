@@ -1,6 +1,9 @@
-//= require modules/bukongList
-//= require modules/loginout
-//= require modules/accountlist
+//= require modules/LoginOut
+
+//= require modules/AlertList
+//= require modules/BukongList
+//= require modules/AccountList
+
 //= require modules/currentuser
 //= require modules/app
 

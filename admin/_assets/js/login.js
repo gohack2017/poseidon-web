@@ -3,7 +3,6 @@
 var LoginApp = {
   run: function() {
     this.bindEvent();
-    this.loadRememberLogin();
   },
 
   bindEvent: function() {
@@ -13,23 +12,14 @@ var LoginApp = {
   onLogin: function(event) {
     event.preventDefault();
 
-    address = CitySelector.value();
     var email = $("#inputEmail").val();
     var password = $("#inputPassword").val();
-
-    rememberLogin = $("input[name='rememberLogin']").prop("checked");
 
     var that = this;
     ApiServer.login({
       email: email,
       password: password,
     }, function(data){
-      LoginAddress.set(address)
-      if (rememberLogin) {
-        LoginName.set(email);
-      } else {
-        LoginName.clear();
-      }
       App.goHome();
     }, function(err){
       if (err.status == 400) {
@@ -38,11 +28,6 @@ var LoginApp = {
         alert("没有该区域权限");
       }
     })
-  },
-
-  loadRememberLogin: function() {
-    loginName = LoginName.get();
-    if (loginName.length > 0) $("#inputEmail").val(loginName);
   }
 }
 

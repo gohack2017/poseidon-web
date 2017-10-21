@@ -1,6 +1,6 @@
 App = {
   run: function(){
-    // CurrentUser.isLogin();
+    CurrentUser.isLogin();
   },
 
   goHome: function() {
