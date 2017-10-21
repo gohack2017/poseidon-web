@@ -1,0 +1,50 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Poseidon 智能布控告警系统
+prefix:
+plugins:
+  - jekyll-assets
+assets:
+  compress:
+    css: 'false | true | default - development: false, production: true'
+    js: 'false | true | default - development: false, production: true'
+  autowrite: true
+  cache: 'false | directory | default: .asset-cache'
+  cache_type: 'memory | filesystem | default: filesystem'
+  cdn: https://cdn.example.com
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: "/assets"
+  digest: true
+  assets:
+    - "*.png"
+    - "bundle.css"
+  sources:
+    - _assets/css
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/fonts
+    - _assets/img
+    - _assets/js
+  features:
+    liquid: 'true | false | default: false'
+    integrity: 'true | false | default: false'
+    # This will add height and width attributes for an img tag.
+    automatic_img_size: 'true | false | n(fixnum): 2,4,6,8 | default: true'
+    # This will add the digest path as an alt attribute for an img tag.
+    automatic_img_alt : 'true | false | default: true'
